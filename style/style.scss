@@ -26,17 +26,13 @@ body {
 }
 
 .infobox {
-    position: absolute;
-    top: 0px; left: 0px;
     animation: 1.5s ease-out leftSlideIn;
 
     background-color: transparentize($primary-color, 0.2);
-    width: 33.3%; height: 100%;
-    
-    .wrapper {
-        box-sizing: border-box;
-        margin: 3em 4em;
-    }
+    width: 33.3%; min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 3em 4em;
 
     section {
         margin: 2em 0;
@@ -114,8 +110,6 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 1em;
     width: 100%;
     color: $secondary-text-color;
 
@@ -130,6 +124,20 @@ footer {
         }
     }
 }
+
+@media (max-width: 768px) {
+    .infobox {
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+
+        .links {
+            ul > li > a {
+                font-size: 1em;
+            }
+        }
+    }
+} 
 
 @keyframes leftSlideIn {
     from {
