@@ -1,3 +1,12 @@
+$primary-color-dark:   #0097A7;
+$primary-color:        #00BCD4;
+$primary-color-light:  #B2EBF2;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #536DFE;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
 body {
-    background: #555 top right / cover url("../assets/background.jpg") no-repeat fixed;
+    background: $primary-color top right / cover url("../assets/background.jpg") no-repeat fixed;
 }
