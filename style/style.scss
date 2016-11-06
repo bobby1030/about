@@ -7,7 +7,7 @@ $primary-text-color:   #212121;
 $secondary-text-color: #757575;
 $divider-color:        #BDBDBD;
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 @mixin icon-bg($col) {
     display: inline-flex;
@@ -21,14 +21,14 @@ $divider-color:        #BDBDBD;
 
 body {
     background: #505E6C top right / cover url("../assets/background.jpg") no-repeat fixed;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans CJK TC', 'Noto Sans TC', sans-serif;
     color: $primary-color-text;
 }
 
 .infobox {
     animation: 1.5s ease-out leftSlideIn;
 
-    background-color: transparentize($primary-color, 0.2);
+    background-color: transparentize($primary-color, 0.1);
     width: 33.3%; min-height: 100vh;
     box-sizing: border-box;
     margin: 0;
@@ -89,12 +89,12 @@ body {
                     font-size: 1.5em;
                     text-decoration: none;
                     color: #FFF;
-                    box-shadow: $secondary-text-color 0 3px 10px;
+                    box-shadow: lighten($secondary-text-color, 10%) 0 2.5px 10px;
                     transition: background-color 0.3s, box-shadow 0.3s;
 
                     &:hover {
                         background-color: lighten($primary-color-dark, 3%);
-                        box-shadow: $secondary-text-color 0 3px 30px;
+                        box-shadow: lighten($secondary-text-color, 10%) 0 2.5px 30px;
                     }
                 }
             }
