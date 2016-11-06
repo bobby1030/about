@@ -20,8 +20,10 @@ body {
 .infobox {
     position: absolute;
     top: 0px; left: 0px;
+    animation: 1.5s ease-out leftSlideIn;
+
     background-color: transparentize($primary-color, 0.2);
-    width: 33.3vw; height: 100vh;
+    width: 33.3%; height: 100%;
     
     .wrapper {
         box-sizing: border-box;
@@ -95,5 +97,15 @@ footer {
             color: $accent-color;
             text-decoration: none; 
         }
+    }
+}
+
+@keyframes leftSlideIn {
+    from {
+        left: -33.3%;
+    }
+
+    to{
+        left: 0;
     }
 }
