@@ -15,15 +15,16 @@ body {
 }
 
 .hello {
-    margin-left: 2em;
+    
+    margin: 0;
     
     h2 {
-        margin-bottom: 0.1em;
-        font-weight: 300
+        font-weight: 300;
+        margin-bottom: 0;
     }
 
     h1 {
-        margin-top: 0;
+        margin-top: 0.2em;
     }
 
 }
@@ -33,29 +34,27 @@ body {
     top: 0px; left: 0px;
     background-color: transparentize($primary-color, 0.6);
     width: 33.3vw; height: 100vh;
+    
+    .content {
+        box-sizing: border-box;
+        margin: 3em 4em;
+    }
 }
 
 footer {
     position: absolute;
     bottom: 1em;
     width: 100%;
-}
-
-.credit {
     color: $secondary-text-color;
-    
-    &.image {
-        position: absolute;
-        right: 5px; bottom: 5px;
-    }
 
-    &.layout {
+    .credit {
         display: flex;
         justify-content: center;
-    }
+        margin-bottom: 0.5em;
 
-    a {
-        color: $accent-color;
-        text-decoration: none; 
+        a {
+            color: $accent-color;
+            text-decoration: none; 
+        }
     }
 }
