@@ -9,13 +9,21 @@ $divider-color:        #BDBDBD;
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+@mixin icon-bg($col) {
+    display: inline-flex;
+    width: 2.5em; height: 2.5em;
+    background-color: $col;
+    border-radius: 50%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     background: #505E6C top right / cover url("../assets/background.jpg") no-repeat fixed;
     font-family: 'Noto Sans TC', sans-serif;
     color: $primary-color-text;
 }
-
-
 
 .infobox {
     position: absolute;
@@ -58,11 +66,40 @@ body {
             padding-left: 0.5em;
 
             li {
-                margin-bottom: 3em;
+                height: 6em;
                 .description {
                     padding-top: 0.2em;
                     padding-left: 6em;
                     line-height: 1.4em;
+                    .text {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .links {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding-left: 0;
+            
+            li {
+                a {
+                    display: block;
+                    @include icon-bg($primary-color-dark)
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    color: #FFF;
+                    box-shadow: $secondary-text-color 0 3px 10px;
+                    transition: background-color 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        background-color: lighten($primary-color-dark, 3%);
+                        box-shadow: $secondary-text-color 0 3px 30px;
+                    }
                 }
             }
         }
@@ -71,15 +108,9 @@ body {
 }
 
 .icon {
-    display: inline-flex;
-    width: 2.5em; height: 2.5em;
-    background-color: $primary-color-dark;
+    @include icon-bg($primary-color-dark);
     color: $primary-color-text;
     font-size: 2em;
-    border-radius: 50%;
-    float: left;
-    justify-content: center;
-    align-items: center;
 }
 
 footer {
