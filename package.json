@@ -1,0 +1,16 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": {
+    "url": "https://github.com/bobby1030/about.git",
+    "type": "git"
+  },
+  "author": "BobbyHo <angela.bobby@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
