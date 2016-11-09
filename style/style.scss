@@ -32,6 +32,17 @@ body {
     margin: 0;
     padding: 3em 4em;
 
+    @media (max-width: 1500px) {
+        width: 50%;
+        margin: 0;
+    } 
+
+    @media (max-width: 827px) {
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+    }
+
     section {
         margin: 2em 0;
     }
@@ -97,8 +108,7 @@ body {
                 }
             }
         }
-    }
-    
+    }    
 }
 
 .icon {
@@ -123,17 +133,3 @@ footer {
     }
 }
 
-@media (max-width: 1500px) {
-    .infobox {
-        width: 50%;
-        margin: 0;
-    }
-} 
-
-@media (max-width: 827px) {
-    .infobox {
-        width: 100%;
-        margin: 0;
-        padding: 1em;
-    }
-} 
