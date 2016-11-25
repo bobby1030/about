@@ -1,6 +1,6 @@
 # about
 My own about me page.
-https://about.bobbyrealms.info
+https://about.bobbyho.me
 
 ## Development
 ```shell
