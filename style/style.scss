@@ -97,12 +97,12 @@ body {
                     font-size: 1.5em;
                     text-decoration: none;
                     color: #FFF;
-                    box-shadow: lighten($secondary-text-color, 10%) 0 2.5px 10px;
-                    transition: background-color 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
                     &:hover {
                         background-color: lighten($primary-color-dark, 3%);
-                        box-shadow: lighten($secondary-text-color, 10%) 0 2.5px 30px;
+                        box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
                     }
                 }
             }
