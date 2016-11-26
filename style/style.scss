@@ -92,7 +92,6 @@ body {
             
             li {
                 a {
-                    display: block;
                     @include icon-bg($primary-color-dark);
                     font-size: 1.5em;
                     text-decoration: none;
