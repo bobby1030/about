@@ -2,6 +2,11 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 
+function swallowError (error) {
+    console.log(error.toString());
+    this.emit('end');
+}
+
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
@@ -15,6 +20,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src('./style/*.scss')
         .pipe(sass({outputStyle: 'compressed'}))
+        .on('error', swallowError)
         .pipe(gulp.dest('./style'))
 })
 
