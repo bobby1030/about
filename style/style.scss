@@ -7,9 +7,10 @@ $primary-text-color:   #212121;
 $secondary-text-color: #757575;
 $divider-color:        #BDBDBD;
 
-@mixin icon-bg($col) {
+@mixin icon-bg($col, $scale) {
     display: inline-flex;
-    width: 2.5em; height: 2.5em;
+    width: 2.5em * $scale; height: 2.5em * $scale;
+    font-size: 2em * $scale;
     background-color: $col;
     border-radius: 50%;
     float: left;
@@ -29,7 +30,7 @@ body {
     width: 33.3%; min-height: 100vh;
     box-sizing: border-box;
     margin: 0;
-    padding: 3em 4em;
+    padding: 3em 4em 1em 4em;
 
     @media (max-width: 1500px) {
         width: 50%;
@@ -85,22 +86,25 @@ body {
     }
 
     .links {
+        min-height: 8em;
+
         ul {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
             list-style-type: none;
-            padding-left: 0;
+            padding: 0;
+            min-height: 5em;
             
             li {
                 a {
-                    @include icon-bg($accent-color);
-                    font-size: 1.5em;
+                    @include icon-bg($accent-color, 0.85);
                     text-decoration: none;
                     color: #FFF;
                     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
                     &:hover {
-                        background-color: lighten($accent-color, 3%);
+                        @include icon-bg(lighten($accent-color, 5%), 0.95);
                         box-shadow: 0 6px 15px 12px rgba(0,0,0,0.15);
                     }
                 }
@@ -110,14 +114,13 @@ body {
 }
 
 .icon {
-    @include icon-bg($accent-color);
+    @include icon-bg($accent-color, 1);
     color: $primary-color-text;
-    font-size: 2em;
 }
 
 footer {
     width: 100%;
-    color: $primary-text-color;
+    color: lighten($primary-text-color, 15);
 
     .credit {
         display: flex;
@@ -125,7 +128,8 @@ footer {
         margin-bottom: 0.5em;
 
         a {
-            color: $secondary-text-color;
+            color: lighten($primary-text-color, 15);
+            font-weight: 600;
             text-decoration: none; 
         }
     }
