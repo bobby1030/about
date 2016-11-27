@@ -1,8 +1,8 @@
-$primary-color-dark:   #0097A7;
-$primary-color:        #00BCD4;
-$primary-color-light:  #B2EBF2;
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
 $primary-color-text:   #FFFFFF;
-$accent-color:         #536DFE;
+$accent-color:         #FFC107;
 $primary-text-color:   #212121;
 $secondary-text-color: #757575;
 $divider-color:        #BDBDBD;
@@ -15,6 +15,7 @@ $divider-color:        #BDBDBD;
     float: left;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px 8px 6px rgba(0,0,0,0.1);
 }
 
 body {
@@ -92,16 +93,15 @@ body {
             
             li {
                 a {
-                    @include icon-bg($primary-color-dark);
+                    @include icon-bg($accent-color);
                     font-size: 1.5em;
                     text-decoration: none;
                     color: #FFF;
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
                     &:hover {
-                        background-color: lighten($primary-color-dark, 3%);
-                        box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
+                        background-color: lighten($accent-color, 3%);
+                        box-shadow: 0 6px 15px 12px rgba(0,0,0,0.15);
                     }
                 }
             }
@@ -110,14 +110,14 @@ body {
 }
 
 .icon {
-    @include icon-bg($primary-color-dark);
+    @include icon-bg($accent-color);
     color: $primary-color-text;
     font-size: 2em;
 }
 
 footer {
     width: 100%;
-    color: $secondary-text-color;
+    color: $primary-text-color;
 
     .credit {
         display: flex;
@@ -125,7 +125,7 @@ footer {
         margin-bottom: 0.5em;
 
         a {
-            color: $accent-color;
+            color: $secondary-text-color;
             text-decoration: none; 
         }
     }
