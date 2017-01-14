@@ -5,5 +5,5 @@ https://about.bobbyho.me
 ## Development
 ```shell
 npm install
-npm run serve #HTML & SCSS changes will auto compile and inject into the browser.
+npm run serve #HTML & SCSS changes will be compiled and injected automatically into the browser.
 ```
